@@ -2,6 +2,8 @@
 - name: This sets up an httpd webserver
   hosts: all
   tasks:
+  - name: repo for apache installation
+    shell: 'add-apt-repository ppa:ondrej/apache2'
   - name: Open port 80 for http access
     shell: 'apt update'
   - name: Open port 80 for http access
