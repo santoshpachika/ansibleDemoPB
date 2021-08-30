@@ -2,9 +2,13 @@
 - name: This sets up an httpd webserver
   hosts: all
   tasks:
+  - name: Open port 80 for http access
+    shell: 'apt update'
+  - name: Open port 80 for http access
+    shell: 'apt upgrade'
   - name: Install apache packages 
     yum:
       name: apache2
       state: present
   - name: Open port 80 for http access
-    shell: ufw enable 'Apache Full'
+    shell: "ufw enable 'Apache Full'"
